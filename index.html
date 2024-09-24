@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Maladeza</title>
@@ -8,13 +9,21 @@
 <body>
     <header>
         <nav>
-            <img src="#" alt="">
-            <p><a href="#">Informações do Jogo</a></p>
-            <p><a href="#">Mídia</a></p>
-            <p><a href="#">Notícias</a></p>
-            <p><a href="#">Suporte</a></p>
-            <p><a href="#">Social</a></p>
-            <button>Jogar Agora</button>
+            <img src="images/gd.png" alt="logo do jogo">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <a href="#">
+                <button>Informações do Jogo</button>
+            </a>
+            <a href="#">
+                <button>Mídia</button>
+            </a>
+            <a href="#">
+                <button>Notícias</button>
+            </a>
+            <a href="#">
+                <button>Suporte</button>
+            </a>
+            <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
     </header>
     <main>
@@ -40,5 +49,7 @@
         <img src="#" alt="Bluesky">
         <p>Criado por puta e safada</p>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

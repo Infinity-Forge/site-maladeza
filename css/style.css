@@ -1,0 +1,106 @@
+:root {
+    --vermelho-escuro: #B05252;
+    --preto-navbar: #181818;
+    --cinza: #D9D9D9;
+    --cinza-da-navbar: #8D8D8D;
+    --cinza-dos-gatoides-e-mapas: #A6A6A6;
+}
+
+* {
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cinza);
+}
+
+header > nav {
+    background-color: var(--preto-navbar);
+    height: 65px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    position: relative; 
+}
+
+header > nav > img {
+    height: 40px;
+    width: 65px;
+}
+
+header > nav > .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+header > nav > a {
+    text-decoration: none;
+}
+
+header > nav > a > button {
+    background-color: var(--preto-navbar);
+    color: #fff;
+    font-size: 1.4em;
+    padding: 6px 20px; 
+    border: none;   
+    cursor: pointer;
+    margin-left: 20px; 
+    transition: border-bottom 0.3s; 
+}
+
+header > nav > a > button:hover {
+    border-bottom: 4px solid var(--vermelho-escuro); 
+    margin-bottom: -2px; 
+}
+
+header > nav > button {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto; 
+    transition: background-color 0.3s; 
+}
+
+header > nav > button:hover {
+    background-color: #A05252; 
+}
+
+@media (max-width: 900px) {
+    header > nav {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    header > nav {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    header > nav > .hamburger {
+        display: block; 
+    }
+
+    header > nav > a,
+    header > nav > button {
+        display: none; 
+    }
+
+    header > nav.active a,
+    header > nav.active button {
+        display: block; 
+        margin: 10px 0; 
+    }
+}
