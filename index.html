@@ -11,17 +11,25 @@
         <nav>
             <img src="images/gd.png" alt="logo do jogo">
             <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div class="dropdown">
+                <button class="navbarButton">Informações do Jogo</button>
+                <div class="dropdown-content">
+                    <a href="#">Personagens</a>
+                    <a href="#">Mapas</a>
+                    <a href="#">Arsenal</a>
+                </div>
+            </div>
             <a href="#">
-                <button>Informações do Jogo</button>
+                <button class="navbarButton">Mídia</button>
             </a>
             <a href="#">
-                <button>Mídia</button>
+                <button class="navbarButton">Notícias</button>
             </a>
             <a href="#">
-                <button>Notícias</button>
+                <button class="navbarButton">Suporte</button>
             </a>
             <a href="#">
-                <button>Suporte</button>
+                <button class="navbarButton">Social</button>
             </a>
             <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
