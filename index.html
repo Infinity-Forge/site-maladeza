@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Maladeza</title>
@@ -8,17 +9,33 @@
 <body>
     <header>
         <nav>
-            <img src="#" alt="">
-            <p><a href="#">Informações do Jogo</a></p>
-            <p><a href="#">Mídia</a></p>
-            <p><a href="#">Notícias</a></p>
-            <p><a href="#">Suporte</a></p>
-            <p><a href="#">Social</a></p>
-            <button>Jogar Agora</button>
+            <img src="images/gd.png" alt="logo do jogo">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div class="dropdown">
+                <button class="navbarButton">Informações do Jogo</button>
+                <div class="dropdown-content">
+                    <a href="#">Personagens</a>
+                    <a href="#">Mapas</a>
+                    <a href="#">Arsenal</a>
+                </div>
+            </div>
+            <a href="#">
+                <button class="navbarButton">Mídia</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton">Notícias</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton">Suporte</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton">Social</button>
+            </a>
+            <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
     </header>
     <main>
-        <section>
+        <section> <!-- Seção para o banner do jogo -->
             <button>Jogar</button>
         </section>
         <article>
@@ -33,12 +50,37 @@
                 <img src="#" alt="">
             </div>
         </article>
+        <section> <!-- Seção dos guardiões -->
+            <div> <!-- Alguma imagem que ainda não sei -->
+
+            </div>
+            <article> <!-- Imagens dos guardiões e conteúdo do guardiões p/2 (no figma) -->
+                <div>
+                    <h1>Guardiões</h1>
+                    <a href="#"><img src="#" alt="Imagem de um guardião"></a>
+                    <a href="#"><img src="#" alt="Imagem de um guardião"></a>
+                    <a href="#"><img src="#" alt="Imagem de um guardião"></a>
+                    <a href="#"><img src="#" alt="Imagem de um guardião"></a>
+                </div>
+                <!-- Guardiões P/2 -->
+                <h2>Nome do Guardião</h2> <!-- Alterar de acordo com a imagem clicada -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatum in architecto unde?</p> <!-- Alterar de acordo com a imagem clicada -->
+                <div> <!-- Guardiões em Pixel Art -->
+                    <img src="" alt="">
+                </div>
+                <div> <!-- Banner dos Guardiões -->
+                    <img src="" alt="">
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         <img src="#" alt="Youtube">
         <img src="#" alt="Instagram">
         <img src="#" alt="Bluesky">
-        <p>Criado por puta e safada</p>
+        <p>Criado por Ana Sofhia, Evandro e Vinícius</p>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
