@@ -1,0 +1,205 @@
+/* variaveis */
+:root {
+    --vermelho-escuro: #B05252;
+    --preto-navbar: #181818;
+    --cinza-escuro: #303030;
+    --cinza: #D9D9D9;
+    --cinza-da-navbar: #8D8D8D;
+    --cinza-personagens: #484848;
+}
+
+/* codigo para a pagina ao todo */
+* {
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cinza);
+}
+
+/* codigo para a navbar */
+header > nav {
+    background-color: var(--preto-navbar);
+    height: 65px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    position: relative; 
+}
+
+header > nav > img {
+    height: 40px;
+    width: 65px;
+}
+
+header > nav > .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; 
+    height: 45px;
+    width: 50px;
+    transition: background-color 0.3s; 
+}
+
+header > nav > a {
+    text-decoration: none;
+}
+
+/* codigo para os botoes da navbar */
+button.navbarButton {
+    background-color: var(--preto-navbar);
+    color: #fff;
+    font-size: 1.4em;
+    padding: 6px 20px; 
+    border: none;   
+    cursor: pointer;
+    margin-left: 20px; 
+    transition: border-bottom 0.3s; 
+}
+
+button.navbarButton:hover {
+    border-bottom: 4px solid var(--vermelho-escuro); 
+    margin-bottom: -2px; 
+}
+
+button#jogar {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto; 
+    transition: background-color 0.3s; 
+}
+
+button#jogar:hover {
+    background-color: #A05252; 
+}
+
+/* codigo do dropdown container para o botao de informações da navbar*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--preto-navbar);
+    opacity: 0.8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+main > div > img.banner {
+    height: 45vh;
+    width: 100%;
+}
+
+main > section#characters > h2 {
+    background-color: var(--cinza-escuro);
+    color: white;
+    margin: 16px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+main > section#characters > div.background {
+    background-color: var(--cinza-personagens);
+    margin: 0px 16px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+
+main > section#characters > div.background {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+main > section#characters > div.background > img {
+    max-width: 250px; 
+    width: 100%; 
+    height: auto;
+    margin: 10px;
+    border-bottom: var(--vermelho-escuro) solid 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.200);
+}
+
+/* Em relação a responsiviade */
+@media (max-width: 900px) {
+    /* Ajuste na navbar */
+    header > nav {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* configurações para a navbar */
+    header > nav {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    header > nav > .hamburger {
+        display: block; 
+    }
+
+    header > nav > .hamburger:hover {
+        background-color: var(--vermelho-escuro);
+    }
+
+    header > nav > a,
+    button.navbarButton,
+    button#jogar {
+        display: none; 
+    }
+
+    header > nav.active a,
+    header > nav.active button {
+        display: block; 
+        margin: 10px 0; 
+    }
+
+    nav.active button#jogar {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main > section#characters > div.background > img {
+        max-width: 150px;
+    }
+}
