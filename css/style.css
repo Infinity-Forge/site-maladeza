@@ -90,6 +90,7 @@ button#jogar:hover {
     position: relative;
     display: inline-block;
     margin-left: 20px;
+    z-index: 2;
 }
 
 .dropdown-content {
@@ -117,7 +118,113 @@ button#jogar:hover {
 
 .dropdown-content a:hover {
     background-color: var(--vermelho-escuro);
+    color: #fff;
 }
+
+/* para o carrocel ficar em baixo do menu do botao informações do jogo */
+div#carouselExampleFade {
+    z-index: 1;
+}
+
+/* div para o botao de baixo do carrocel */
+.carousel-caption {
+    top: 25%;    
+    text-align: center;
+}
+
+/* botao jogar que fica em baixo do carrocel na section */
+button#jogarBanner {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto; 
+    transition: background-color 0.3s; 
+    width: 250px;
+}
+
+button#jogarBanner:hover {
+    background-color: #A05252; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+/* parte das novidades / carrocel de novidades */
+article#novidades {
+    background-color: rgb(243, 242, 242);
+    margin-top: 50px;
+    padding: 20px;
+}
+
+article#novidades h1 {
+    background-color: var(--preto-navbar);
+    color: white;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 2.5em;
+}
+
+#novidadesCarousel .carousel-control-prev-icon,
+#novidadesCarousel .carousel-control-next-icon {
+    background-color: black; /* Cor de fundo dos ícones */
+    border-radius: 10px; /* Arredondar os ícones */
+    padding: 20px;
+}
+
+#novidadesCarousel .carousel-control-prev-icon {
+    margin-right: 65px;    
+}
+
+#novidadesCarousel .carousel-control-next-icon {
+    margin-left: 65px;    
+}
+
+div.containersComNovidades {
+    display: flex;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    width: 100%;
+}
+
+div.containerNovidade {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 10px; 
+    width: 300px;
+    /* flex: 1 1 300px;  */
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+div.containerNovidade:hover {
+    transform: scale(1.05); 
+}
+
+div.containerNovidade img {
+    width: 100%; 
+    height: 150px; 
+}
+
+div.containerNovidade p {
+    margin-top: 10px; 
+    text-align: left; 
+    font-size: 16px;
+    font-weight: bold;
+    text-indent: 1em;
+    line-height: 1.7em;
+}
+
 
 /* Em relação a responsiviade */
 @media (max-width: 900px) {
@@ -157,5 +264,23 @@ button#jogar:hover {
     nav.active button#jogar {
         display: block;
         margin: 10px 0;
+    }
+
+    /* em relação ao botao de baixo do carrocel na section */
+    button#jogarBanner {
+        width: 150px;
+    }
+
+    /* em relação aos conteiners do carrocel no artigo de novidades */
+    div.containersComNovidades {
+        width: auto;
+    }
+
+    #novidadesCarousel .carousel-control-prev-icon {
+        margin-right: 25px;    
+    }
+    
+    #novidadesCarousel .carousel-control-next-icon {
+        margin-left: 25px;    
     }
 }
