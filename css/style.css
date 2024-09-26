@@ -53,6 +53,11 @@ header > nav > a {
     text-decoration: none;
 }
 
+img#logoNavbar {
+    margin-top: 7px;
+    border-radius: 10px;
+}
+
 /* codigo para os botoes da navbar */
 button.navbarButton {
     background-color: var(--preto-navbar);
@@ -121,7 +126,15 @@ button#jogar:hover {
     color: #fff;
 }
 
-/* para o carrocel ficar em baixo do menu do botao informações do jogo */
+/* sobre o carrocel do inicio da pagina / banner */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 429px; 
+    object-fit: cover;
+}
+
+/* para o carrocel do banner do inicio ficar em baixo do menu do botao informações do jogo */
 div#carouselExampleFade {
     z-index: 1;
 }
@@ -241,8 +254,13 @@ div.containerNovidade p {
         height: auto; 
     }
 
+    img#logoNavbar {
+        margin-top: 12px;
+    }
+
     header > nav > .hamburger {
         display: block; 
+        margin-bottom: 10px;
     }
 
     header > nav > .hamburger:hover {
@@ -266,21 +284,35 @@ div.containerNovidade p {
         margin: 10px 0;
     }
 
+    /* em relação ao carrocel na selection */
+    .carousel-item img {
+        object-fit: contain;
+    }
+
     /* em relação ao botao de baixo do carrocel na section */
     button#jogarBanner {
-        width: 150px;
+        height: 42px;
+        width: 130px;
     }
 
     /* em relação aos conteiners do carrocel no artigo de novidades */
+    article#novidades h1 {
+        font-size: 2.3em;
+    }
+
     div.containersComNovidades {
         width: auto;
     }
 
+    div.containerNovidade {
+        width: 280px;
+    }
+
     #novidadesCarousel .carousel-control-prev-icon {
-        margin-right: 25px;    
+        margin-right: 47px;    
     }
     
     #novidadesCarousel .carousel-control-next-icon {
-        margin-left: 25px;    
+        margin-left: 47px;    
     }
 }
