@@ -16,10 +16,6 @@
     margin: 0;
 }
 
-body {
-    background-color: var(--cinza);
-}
-
 /* codigo para a navbar */
 header > nav {
     background-color: var(--preto-navbar);
@@ -128,13 +124,14 @@ main > div > img.banner {
 main > section#characters > h2 {
     background-color: var(--cinza-escuro);
     color: white;
+    font-size: 1.8em;
     margin: 16px;
     padding: 5px;
     border-radius: 7px;
 }
 
 main > section#characters > div.background {
-    background-color: var(--cinza-personagens);
+    background-color: var(--cinza);
     margin: 0px 16px;
     padding: 20px 30px;
     border-radius: 15px;
@@ -154,9 +151,14 @@ main > section#characters > div.background > img {
     width: 100%; 
     height: auto;
     margin: 10px;
-    border-bottom: var(--vermelho-escuro) solid 30px;
     border-radius: 15px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.200);
+}
+
+main > section#characters > div.background > img:hover {
+    border-bottom: rgba(176, 84, 84, 0.700) solid 30px;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
 }
 
 /* Em relação a responsiviade */
