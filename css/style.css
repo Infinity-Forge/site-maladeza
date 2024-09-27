@@ -171,6 +171,7 @@ button#jogarBanner:hover {
 article#novidades {
     background-color: rgb(243, 242, 242);
     margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px;
 }
 
@@ -238,6 +239,135 @@ div.containerNovidade p {
     line-height: 1.7em;
 }
 
+/* codigo para o banner dos guardioes e cavaleiros (parte reutilizada ctrl c + ctrl v) */
+div#bannerDosGuardioes {
+    margin-bottom: 50px;
+}
+
+img#bannerGuardioes {
+    height: 300px;
+    width: 100%;
+}
+
+h1.tituloParaAbas {
+    background-color: var(--preto-navbar);
+    color: white;
+    padding: 0px 10px;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+ /* codigo para a parte das divs responsivas dos guardioes /////////////////////////////////*/
+.gurdioesCavaleiros {
+    background-color: rgb(243, 242, 242);
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px 0; 
+}
+
+.containerGardiaoCavaleirosPai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.containerGardiaoCavaleiros {
+    flex: 1 1 20%;
+    max-width: 250px; 
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover para expandir a imagem */
+.containerGardiaoCavaleiros:hover {
+    transform: scale(1.15);
+}
+
+/* Estilo da imagem */
+.containerGardiaoCavaleiros img {
+    width: 240px;;
+    height: 330px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+/* Nome do guardião */
+.nomeDoGuardiao {
+    background-color: var(--preto-navbar);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 240px; 
+    text-align: center;
+    padding: 5px 0; 
+}
+
+/* Estilo da borda ao passar o mouse */
+.containerGardiaoCavaleiros:hover .nomeDoGuardiao {
+    color: white; 
+    background-image: linear-gradient(var(--vermelho-escuro), var(--vermelho-escuro));
+    background-size: 100% 40px; /*4 px tbm é legal*/ 
+    background-position: bottom; 
+    background-repeat: no-repeat;
+}
+
+/* codigo sobre a parte mostra o mapa com o textinho do lado com o botao jogar //////////////////// */
+.textoEMapa {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.textinhoJogo {
+    flex: 1;
+    max-width: 40%;
+    padding: 10px; 
+}
+
+button.jogarDeBaixoDoTexto {
+    width: 170px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto; 
+    transition: background-color 0.3s; 
+}
+
+button.jogarDeBaixoDoTexto:hover {
+    background-color: #A05252; 
+}
+
+.imagemDoLado {
+    flex: 1; 
+    max-width: 60%;
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.imagemDoLado img {
+    width: 100%; 
+    height: auto; 
+    max-width: 800px; 
+    border-radius: 10px; 
+}
 
 /* Em relação a responsiviade */
 @media (max-width: 900px) {
@@ -314,5 +444,48 @@ div.containerNovidade p {
     
     #novidadesCarousel .carousel-control-next-icon {
         margin-left: 47px;    
+    }
+
+    /* banner guardioes e cavaleiros (reutilizado) */
+    img#bannerGuardioes {
+        height: 200px;
+    }
+
+    h1.tituloParaAbas {
+        font-size: 1.8em;
+    }
+
+    /* sobre a parte dos guardioes e cavaleiros */
+    .containerGardiaoCavaleiros {
+        flex: 1 1 40%; 
+        max-width: 200px; 
+    }
+
+    .containerGardiaoCavaleiros img {
+        width: 200px; 
+        height: 280px; 
+    }
+
+    .nomeDoGuardiao {
+        font-size: 16px; 
+        width: 200px; 
+    }
+
+
+    /* sobre a parte mostra o mapa com o textinho do lado com o botao jogar */
+    .textoEMapa {
+        flex-direction: column-reverse; 
+        align-items: center; 
+    }
+    
+    .textinhoJogo {
+        max-width: 100%; 
+        text-align: center;
+    }
+
+    .imagemDoLado {
+        max-width: 100%; 
+        text-align: center; 
+        justify-content: center; 
     }
 }
