@@ -117,8 +117,10 @@ button#jogar:hover {
 }
 
 main > div > img.banner {
-    height: 45vh;
     width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
 }
 
 main > section#characters > h2 {
