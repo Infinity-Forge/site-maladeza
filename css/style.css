@@ -485,6 +485,83 @@ footer {
     max-width: 100%; 
 }
 
+ /* Estilo da aba de suporte */
+ .suporte-aba {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: right 0.4s;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.suporte-aba.ativa {
+    right: 0;
+    background-color: var(--vermelho-escuro);
+}
+
+.suporte-aba p {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.suporte-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suporte-header h2 {
+    margin: 0;
+}
+
+.fechar-aba {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-bot {
+    height: 150px;
+    background-color: #ddd;
+    margin-top: 20px;
+    transition: height 0.4s;
+}
+
+.chat-bot.expandido {
+    height: 100%;
+}
+
+.botoes-info {
+    margin-top: 20px;
+}
+
+.botoes-info button {
+    background-color: white;
+    border: none;
+    color: var(--vermelho-escuro);
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.botoes-info button:hover {
+    color: white;
+    background-color: #ff8585; 
+    transition: .4s;
+}
+
+/* estilos para o chatbot */
+
 /* Em relação a responsiviade */
 @media (max-width: 900px) {
     /* Ajuste na navbar */

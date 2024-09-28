@@ -54,7 +54,7 @@
                 <button class="navbarButton">Notícias</button>
             </a>
             <a href="#">
-                <button class="navbarButton">Suporte</button>
+                <button class="navbarButton" onclick="abrirSuporte()">Suporte</button>
             </a>
             <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
@@ -279,7 +279,43 @@
         </div>
     </footer>
 
-    <script src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Aba de suporte -->
+    <div class="suporte-aba" id="abaSuporte">
+        <div class="suporte-header">
+            <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+        </div>
+        <p>Bem-vindo, no que podemos ajudar?</p>
+        <!-- <button class="btn-expand" id="btn-expand" onclick="expandirChatBot()">Expandir/Recolher</button>
+        <div class="chat-bot" id="chatBot">
+            <div class="box-questions">
+                <div class="header">
+                    <p>Perguntas e respostas - CHATGPT</p>
+                </div>
+                <p id="status"></p>
+                <div id="history">
+                    <!-- Aqui vai o chat gerado conforme as respostas 
+                </div>
+                <div class="footer">
+                    <input type="text" id="message-input" placeholder="Pergunte aqui...">
+                    <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+                </div>
+            </div>
+        </div> -->
+        <div class="botoes-info">
+            <a href="pages/paginaComChatBot.html">
+                <button>Chat com IA para responder duvidas</button>
+            </a>
+            <a href="#">
+                <button>Políticas de Privacidade</button>
+            </a>
+            <a href="#">
+                <button>Termos e Condições</button>
+            </a>
+        </div>
+    </div>
 </body>
+
+<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 </html>
