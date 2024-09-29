@@ -14,6 +14,14 @@ function fecharSuporte()
     document.getElementById('abaSuporte').classList.remove('ativa');
 }
 
+function expandirChatBot() {
+    document.getElementById('chatbot-expanded').classList.add('active');
+}
+
+function recolherChatBot() {
+    document.getElementById('chatbot-expanded').classList.remove('active');
+}
+
 // function expandirChatBot() 
 // {
 //     const chatBot = document.getElementById('chatBot');

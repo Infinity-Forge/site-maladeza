@@ -538,6 +538,44 @@ footer {
     height: 100%;
 }
 
+#suporte {
+    position: relative;
+}
+
+.chatbot-preview {
+    width: 200px; /* Tamanho da pré-visualização */
+    height: 100px;
+    background-color: var(--gray);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.chatbot-preview:hover {
+    background-color: var(--purple);
+}
+
+.chatbot-expanded {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Para ficar acima de outros elementos */
+}
+
+.chatbot-expanded.active {
+    display: flex; /* Mostra quando ativo */
+}
+
 .botoes-info {
     margin-top: 20px;
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../css/noticias.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../images/gd.png" alt="logo do jogo" id="logoNavbar">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div class="dropdown">
+                <button class="navbarButton">Informações do Jogo</button>
+                <div class="dropdown-content">
+                    <a href="paginaPersonagens.html">Personagens</a>
+                    <a href="#">Mapas</a>
+                    <a href="#">Arsenal</a>
+                </div>
+            </div>
+            <a href="#">
+                <button class="navbarButton">Mídia</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton">Notícias</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton">Suporte</button>
+            </a>
+            <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
+        </nav>
+    </header>
+    <main>
+        <div class="banner-container">
+            <h1>Notícias</h1>
+            <img src="../images/clash.jpg" alt="Banner" class="banner">
+        </div>
+    </main>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
