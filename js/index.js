@@ -4,6 +4,10 @@ function toggleMenu()
     nav.classList.toggle('active');
 }
 
+function goBack() {
+    window.history.back(); 
+}
+
 function abrirSuporte() 
 {
     document.getElementById('abaSuporte').classList.add('ativa');
