@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../css/noticias.css">
+    <link rel="stylesheet" href="../css/styleNoticias.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
@@ -19,14 +19,11 @@
                     <a href="#">Arsenal</a>
                 </div>
             </div>
-            <a href="#">
-                <button class="navbarButton">Mídia</button>
-            </a>
-            <a href="#">
+            <a href="paginaNoticias.html">
                 <button class="navbarButton">Notícias</button>
             </a>
             <a href="#">
-                <button class="navbarButton">Suporte</button>
+                <button class="navbarButton" onclick="abrirSuporte()">Suporte</button>
             </a>
             <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
@@ -36,7 +33,78 @@
             <h1>Notícias</h1>
             <img src="../images/clash.jpg" alt="Banner" class="banner">
         </div>
+        <section>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+        </section>
     </main>
+    
+    <!-- Aba de suporte -->
+    <div class="suporte-aba" id="abaSuporte">
+        <div class="suporte-header">
+            <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+        </div>
+        <p>Bem-vindo, no que podemos ajudar?</p>
+        <div id="suporte">
+            <div class="chatbot-preview" onclick="expandirChatBot()">
+              <p>Chatbot Preview</p>
+            </div>
+          </div>
+          
+          <!-- Área para o chatbot expandido -->
+          <div id="chatbot-expanded" class="chatbot-expanded">
+            <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
+            <div class="box-questions">
+              <div class="header">
+                <p>CHAT DE DÚVIDAS</p>
+              </div>
+              <p id="status"></p>
+              <div id="history">
+                <!-- Aqui vai o chat gerado conforme as respostas -->
+              </div>
+              <div class="footer">
+                <input type="text" id="message-input" placeholder="Pergunte aqui...">
+                <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        <div class="botoes-info">
+            <a href="#">
+                <button>Políticas de Privacidade</button>
+            </a>
+            <a href="#">
+                <button>Termos e Condições</button>
+            </a>
+        </div>
+    </div>
 
     <script src="../js/index.js"></script>
 </body>
