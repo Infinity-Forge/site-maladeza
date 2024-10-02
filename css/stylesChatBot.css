@@ -11,21 +11,10 @@
     --gray2: #cccccc;
 }
 
-body {
-    background-color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-}
-
 .back-button {
     position: fixed; 
     top: 10px;
     left: 20px;
-    background-color: transparent; 
     border: none; 
     border-radius: 5px;
     color: var(--preto-navbar); 
@@ -33,23 +22,25 @@ body {
     cursor: pointer; 
     z-index: 1000; 
     padding: 10px;
-    color: black;
+    color: white;
+    background-color: var(--vermelho-escuro);
 }
 
 .back-button:hover {
     color: white;
-    background-color: var(--vermelho-escuro);
+    background-color: rgb(255, 146, 146);
     cursor: pointer;
     transition: .4s;
 }
 
 .box-questions {
     margin-top: 3rem;
-    background-color: rgb(243, 242, 242);
+    background-color: var(--preto-navbar);
     color: var(--dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 620px;
     max-height: 800px;
     width: 600px;
     border-radius: 10px;
