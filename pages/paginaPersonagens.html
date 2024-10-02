@@ -9,27 +9,24 @@
 <body>
     <header>
         <nav>
-            <img src="../images/gd.png" alt="logo do jogo">
+            <img src="../images/gd.png" alt="logo do jogo" id="logoNavbar">
             <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
             <div class="dropdown">
                 <button class="navbarButton">Informações do Jogo</button>
                 <div class="dropdown-content">
-                    <a href="#">Personagens</a>
+                    <a href="paginaPersonagens.html">Personagens</a>
                     <a href="#">Mapas</a>
                     <a href="#">Arsenal</a>
                 </div>
             </div>
-            <a href="#">
-                <button class="navbarButton">Mídia</button>
-            </a>
-            <a href="#">
+            <a href="paginaNoticias.html">
                 <button class="navbarButton">Notícias</button>
             </a>
             <a href="#">
-                <button class="navbarButton">Suporte</button>
+                <button class="navbarButton" onclick="abrirSuporte()">Suporte</button>
             </a>
-            <a href="#">
-                <button class="navbarButton">Social</button>
+            <a href="../index.html">
+                <button class="navbarButton">Home</button>
             </a>
             <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
         </nav>
@@ -70,6 +67,44 @@
             </div>
         </section>
     </main>
+    <!-- Aba de suporte -->
+    <div class="suporte-aba" id="abaSuporte">
+        <div class="suporte-header">
+            <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+        </div>
+        <p>Bem-vindo, no que podemos ajudar?</p>
+        <div id="suporte">
+            <div class="chatbot-preview" onclick="expandirChatBot()">
+              <p>Chatbot Preview</p>
+            </div>
+          </div>
+          
+          <!-- Área para o chatbot expandido -->
+          <div id="chatbot-expanded" class="chatbot-expanded">
+            <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
+            <div class="box-questions">
+              <div class="header">
+                <p>CHAT DE DÚVIDAS</p>
+              </div>
+              <p id="status"></p>
+              <div id="history">
+                <!-- Aqui vai o chat gerado conforme as respostas -->
+              </div>
+              <div class="footer">
+                <input type="text" id="message-input" placeholder="Pergunte aqui...">
+                <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        <div class="botoes-info">
+            <a href="#">
+                <button>Políticas de Privacidade</button>
+            </a>
+            <a href="#">
+                <button>Termos e Condições</button>
+            </a>
+        </div>
+    </div>
     <footer>
         <img src="#" alt="Youtube">
         <img src="#" alt="Instagram">
