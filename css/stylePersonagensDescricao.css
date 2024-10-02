@@ -1,0 +1,111 @@
+/* variaveis */
+:root {
+    --vermelho-escuro: #B05252;
+    --preto-navbar: #181818;
+    --cinza-escuro: #303030;
+    --cinza: #D9D9D9;
+    --cinza-da-navbar: #8D8D8D;
+    --cinza-personagens: #484848;
+}
+
+* {
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--cinza);
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    border-radius: 0px 30px 30px 0px;
+    margin-bottom: 16px;
+}
+
+header > button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+header > h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textoImagem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#textoImagem article {
+    flex: 2;
+    padding: 20px;
+}
+
+#textoImagem article > p {
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent: 1em;
+    line-height: 1.4em;
+}
+
+#imagemPersonagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagemPersonagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+#frasePersonagem {
+    background-color: var(--cinza);
+    width: 100%;
+    max-width: 1000px;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    
+    header {
+        border-radius: 0px;
+    }
+
+    #textoImagem {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #textoImagem article {
+        padding: 10px;
+    }
+
+    #frasePersonagem {
+        margin: 10px;
+    }
+}
