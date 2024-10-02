@@ -161,6 +161,147 @@ main > section#characters > div.background > img:hover {
     cursor: pointer;
 }
 
+/* sobre a aba do suporte e a expansão do chatbot */
+.suporte-aba {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: right 0.4s;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.suporte-aba.ativa {
+    right: 0;
+    background-color: var(--vermelho-escuro);
+}
+
+.suporte-aba p {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.suporte-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suporte-header h2 {
+    margin: 0;
+}
+
+.fechar-aba {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-bot {
+    height: 150px;
+    background-color: #ddd;
+    margin-top: 20px;
+    transition: height 0.4s;
+}
+
+.chat-bot.expandido {
+    height: 100%;
+}
+
+#suporte {
+    position: relative;
+}
+
+.chatbot-preview {
+    width: 260px;
+    height: 300px;
+    background-color: var(--preto-navbar);
+    color: white;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 21px;
+    cursor: pointer;
+    transition: .3s;
+    text-align: center;
+}
+
+.header-preview p{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(192, 61, 61);
+}
+
+.footer-preview {
+    background-color: rgb(192, 61, 61);
+    padding: 10px 0px;
+    margin-top: 125px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+button#btn-submit-preview {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
+
+button#btn-submit-preview:hover {
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(255, 146, 146);
+    color: white;
+}
+
+.chatbot-expanded {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.chatbot-expanded.active {
+    display: flex; 
+}
+
+.botoes-info {
+    margin-top: 20px;
+}
+
+.botoes-info button {
+    background-color: white;
+    border: none;
+    color: var(--vermelho-escuro);
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.botoes-info button:hover {
+    color: white;
+    background-color: #ff8585; 
+    transition: .4s;
+}
+
 /* Em relação a responsiviade */
 @media (max-width: 900px) {
     /* Ajuste na navbar */
