@@ -121,6 +121,7 @@ main > div > img.banner {
     width: 100%;
 }
 
+/* Personagens*/
 main > section#characters > h2 {
     background-color: var(--cinza-escuro);
     color: white;
@@ -136,9 +137,6 @@ main > section#characters > div.background {
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
-}
-
-main > section#characters > div.background {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -146,19 +144,49 @@ main > section#characters > div.background {
     flex-wrap: wrap; 
 }
 
-main > section#characters > div.background > img {
+.characterContainer {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.characterContainer:hover {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    transform: scale(1.15);
+}
+
+.characterContainer img {
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.200);
     max-width: 250px; 
     width: 100%; 
     height: auto;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.200);
 }
 
-main > section#characters > div.background > img:hover {
-    border-bottom: rgba(176, 84, 84, 0.700) solid 30px;
-    transition: border-bottom 0.3s;
-    cursor: pointer;
+.characterName {
+    background-color: var(--preto-navbar);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 240px; 
+    text-align: center;
+    padding: 5px 0; 
+}
+
+.characterContainer:hover .characterName {
+    color: white; 
+    background-image: linear-gradient(var(--vermelho-escuro), var(--vermelho-escuro));
+    background-size: 100% 40px;
+    background-position: bottom; 
+    background-repeat: no-repeat;
 }
 
 /* sobre a aba do suporte e a expansão do chatbot */
