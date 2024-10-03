@@ -2,10 +2,10 @@
 :root {
     --vermelho-escuro: #B05252;
     --preto-navbar: #181818;
-    --cinza-escuro: #303030;
     --cinza: #D9D9D9;
+    --cinza-escuro: #303030;
     --cinza-da-navbar: #8D8D8D;
-    --cinza-personagens: #484848;
+    --cinza-dos-gatoides-e-mapas: #A6A6A6;
 }
 
 /* codigo para a pagina ao todo */
@@ -50,6 +50,11 @@ header > nav > a {
     text-decoration: none;
 }
 
+img#logoNavbar {
+    margin-top: 7px;
+    border-radius: 10px;
+}
+
 /* codigo para os botoes da navbar */
 button.navbarButton {
     background-color: var(--preto-navbar);
@@ -87,6 +92,7 @@ button#jogar:hover {
     position: relative;
     display: inline-block;
     margin-left: 20px;
+    z-index: 2;
 }
 
 .dropdown-content {
@@ -114,21 +120,59 @@ button#jogar:hover {
 
 .dropdown-content a:hover {
     background-color: var(--vermelho-escuro);
+    color: #fff;
 }
 
-main > div > img.banner {
-    height: 45vh;
+/* sobre o carrocel do inicio da pagina / banner */
+.carousel-item img {
     width: 100%;
+    height: auto;
+    max-height: 350px; 
+    object-fit: cover;
+}
+
+/* para o carrocel do banner do inicio ficar em baixo do menu do botao informações do jogo */
+div#carouselExampleFade {
+    z-index: 1;
+}
+
+/* div para o botao de baixo do carrocel */
+.carousel-caption {
+    top: 25%;    
+    text-align: center;
+}
+
+/* botao jogar que fica em baixo do carrocel na section */
+button#jogarBanner {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto; 
+    transition: background-color 0.3s; 
+    width: 250px;
+}
+
+button#jogarBanner:hover {
+    background-color: #A05252; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
 /* Personagens*/
 main > section#characters > h2 {
-    background-color: var(--cinza-escuro);
+    background-color: var(--preto-navbar);
     color: white;
-    font-size: 1.8em;
-    margin: 16px;
-    padding: 5px;
-    border-radius: 7px;
+    padding: 0px 10px;
+    font-size: 2.5em;
+    margin: 50px 16px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 main > section#characters > div.background {
@@ -157,6 +201,7 @@ main > section#characters > div.background {
     margin-top: 35px;
     margin-bottom: 35px;
     transform: scale(1.15);
+    transition: 0.3s;
 }
 
 .characterContainer img {

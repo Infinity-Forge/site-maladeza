@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/stylePersonagens.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
             <div class="dropdown">
                 <button class="navbarButton">Informações do Jogo</button>
                 <div class="dropdown-content">
-                    <a href="paginaPersonagens.html">Personagens</a>
+                    <a href="pages/paginaPersonagens.html">Personagens</a>
                     <a href="#">Mapas</a>
                     <a href="#">Arsenal</a>
                 </div>
@@ -32,9 +33,38 @@
         </nav>
     </header>
     <main>
-        <div> <!-- Banner dos Personagens -->
-            <img src="../images/clash.jpg" alt="Banner" class="banner">
-        </div>
+        <section id="Banner"> <!-- Seção para o banner do jogo -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/cat.jpg" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/gd.png" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/clash.jpg" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>   
         <section id="characters"> <!-- Personagens -->
             <h2>Guardiões</h2>
             <div class="background">
@@ -183,5 +213,6 @@
     </footer>
 
     <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

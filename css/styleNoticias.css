@@ -1,12 +1,13 @@
 /* variaveis */
 :root {
-    --vermelho-escuro: rgb(176, 82, 82);
+    --vermelho-escuro: #B05252;
     --preto-navbar: #181818;
     --cinza: #D9D9D9;
     --cinza-da-navbar: #8D8D8D;
     --cinza-dos-gatoides-e-mapas: #A6A6A6;
 }
 
+/* codigo para a pagina ao todo */
 * {
     box-sizing: border-box; 
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +15,7 @@
     margin: 0;
 }
 
+/* codigo para a navbar */
 header > nav {
     background-color: var(--preto-navbar);
     height: 65px;
@@ -52,6 +54,7 @@ img#logoNavbar {
     border-radius: 10px;
 }
 
+/* codigo para os botoes da navbar */
 button.navbarButton {
     background-color: var(--preto-navbar);
     color: #fff;
@@ -83,6 +86,7 @@ button#jogar:hover {
     background-color: #A05252; 
 }
 
+/* codigo do dropdown container para o botao de informações da navbar*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -118,35 +122,62 @@ button#jogar:hover {
     color: #fff;
 }
 
-main > div > img.banner {
+/* sobre o carrocel do inicio da pagina / banner */
+.carousel-item img {
     width: 100%;
-    height: 100%;
-    max-height: 350px;
+    height: auto;
+    max-height: 350px; 
     object-fit: cover;
 }
 
-.banner-container {
-    position: relative;
+/* para o carrocel do banner do inicio ficar em baixo do menu do botao informações do jogo */
+div#carouselExampleFade {
+    z-index: 1;
+}
+
+/* div para o botao de baixo do carrocel */
+.carousel-caption {
+    top: 25%;    
+    text-align: center;
+}
+
+/* botao jogar que fica em baixo do carrocel na section */
+button#jogarBanner {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto; 
+    transition: background-color 0.3s; 
+    width: 250px;
+}
+
+button#jogarBanner:hover {
+    background-color: #A05252; 
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    height: 350px;
-    margin-bottom: 40px;
-    border-bottom: 20px var(--vermelho-escuro) solid;
+    flex-wrap: wrap; 
 }
 
-.banner-container h1 {
-    position: absolute;
-    color: white;
-    font-size: 3em; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
-    z-index: 2; 
-}
-
-main > section {
+/* main */
+main > section#noticia {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+main > h2 {
+    background-color: var(--preto-navbar);
+    color: white;
+    padding: 0px 10px;
+    font-size: 2.5em;
+    margin: 50px 16px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 main section > article.noticiaContainer {
@@ -154,7 +185,7 @@ main section > article.noticiaContainer {
     background-color: var(--cinza-dos-gatoides-e-mapas);
     max-width: 31%;
     height: 340px;
-    margin: 0 20px 20px 20px;
+    margin: 50px 20px 20px 20px;
     padding: 10px;
     border: #5c5c5c 1px solid;
     border-radius: 15px;
@@ -336,45 +367,6 @@ button#btn-submit-preview:hover {
 }
 
 @media (max-width: 768px) {
-    header > nav {
-        flex-direction: column; 
-        height: auto; 
-    }
-
-    img#logoNavbar {
-        margin-top: 12px;
-    }
-
-    header > nav > .hamburger {
-        display: block; 
-        margin-bottom: 10px;
-    }
-
-    header > nav > .hamburger:hover {
-        background-color: var(--vermelho-escuro);
-    }
-
-    header > nav > a,
-    button.navbarButton,
-    button#jogar {
-        display: none; 
-    }
-
-    header > nav.active a,
-    header > nav.active button {
-        display: block; 
-        margin-bottom: 10px; 
-        width: 100%;
-        text-align: center;
-    }
-
-    .banner-container {
-        height: 250px;
-    }
-
-    .banner-container h1 {
-        font-size: 2em; 
-    }
 
     main > section {
         display: flex;
@@ -396,5 +388,46 @@ button#btn-submit-preview:hover {
 
     article.noticiaContainer > img {
         height: auto;
+    }
+}
+
+/* Em relação a responsiviade */
+@media (max-width: 900px) {
+    /* Ajuste na navbar */
+    header > nav {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* configurações para a navbar */
+    header > nav {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    header > nav > .hamburger {
+        display: block; 
+    }
+
+    header > nav > .hamburger:hover {
+        background-color: var(--vermelho-escuro);
+    }
+
+    header > nav > a,
+    button.navbarButton,
+    button#jogar {
+        display: none; 
+    }
+
+    header > nav.active a,
+    header > nav.active button {
+        display: block; 
+        margin: 10px 0; 
+    }
+
+    nav.active button#jogar {
+        display: block;
+        margin: 10px 0;
     }
 }
