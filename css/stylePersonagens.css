@@ -16,6 +16,10 @@
     margin: 0;
 }
 
+main {
+    background-color: white;
+}
+
 /* codigo para a navbar */
 header > nav {
     background-color: var(--preto-navbar);

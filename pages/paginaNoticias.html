@@ -15,8 +15,8 @@
             <div class="dropdown">
                 <button class="navbarButton">Informações do Jogo</button>
                 <div class="dropdown-content">
-                    <a href="../pages/paginaPersonagens.html">Personagens</a>
-                    <a href="#">Mapas</a>
+                    <a href="paginaPersonagens.html">Personagens</a>
+                    <a href="">Mapas</a>
                     <a href="#">Arsenal</a>
                 </div>
             </div>
@@ -102,42 +102,48 @@
     
     <!-- Aba de suporte -->
     <div class="suporte-aba" id="abaSuporte">
-        <div class="suporte-header">
-            <button class="fechar-aba" onclick="fecharSuporte()">X</button>
-        </div>
-        <p>Bem-vindo, no que podemos ajudar?</p>
-        <div id="suporte">
-            <div class="chatbot-preview" onclick="expandirChatBot()">
-              <p>Chatbot Preview</p>
+      <div class="suporte-header">
+          <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+      </div>
+      <p>Bem-vindo, no que podemos ajudar?</p>
+      <div id="suporte">
+          <div class="chatbot-preview" onclick="expandirChatBot()">
+            <div class="header-preview">
+                <p>CHAT DE DUVIDAS</p>
+            </div>
+            <div class="footer-preview">
+                <input type="text" placeholder="Pergunte aqui...">
+                <button id="btn-submit-preview">Enviar</button>
             </div>
           </div>
-          
-          <!-- Área para o chatbot expandido -->
-          <div id="chatbot-expanded" class="chatbot-expanded">
-            <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
-            <div class="box-questions">
-              <div class="header">
-                <p>CHAT DE DÚVIDAS</p>
-              </div>
-              <p id="status"></p>
-              <div id="history">
-                <!-- Aqui vai o chat gerado conforme as respostas -->
-              </div>
-              <div class="footer">
-                <input type="text" id="message-input" placeholder="Pergunte aqui...">
-                <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
-              </div>
+      </div>
+        
+        <!-- Área para o chatbot expandido -->
+        <div id="chatbot-expanded" class="chatbot-expanded">
+          <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
+          <div class="box-questions">
+            <div class="header">
+              <p>CHAT DE DÚVIDAS</p>
+            </div>
+            <p id="status"></p>
+            <div id="history">
+              <!-- Aqui vai o chat gerado conforme as respostas -->
+            </div>
+            <div class="footer">
+              <input type="text" id="message-input" placeholder="Pergunte aqui...">
+              <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
             </div>
           </div>
-        <div class="botoes-info">
-            <a href="#">
-                <button>Políticas de Privacidade</button>
-            </a>
-            <a href="#">
-                <button>Termos e Condições</button>
-            </a>
         </div>
-    </div>
+      <div class="botoes-info">
+          <a href="pages/paginaPoliticaDePrivacidade.html">
+              <button>Políticas de Privacidade</button>
+          </a>
+          <a href="pages/paginaTermos.html">
+              <button>Termos e Condições</button>
+          </a>
+      </div>
+  </div>
 
     <script src="../js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
