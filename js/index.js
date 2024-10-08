@@ -4,7 +4,8 @@ function toggleMenu()
     nav.classList.toggle('active');
 }
 
-function goBack() {
+function goBack() 
+{
     window.history.back(); 
 }
 
