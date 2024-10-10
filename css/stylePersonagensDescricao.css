@@ -58,6 +58,9 @@ main {
 #textoImagem article {
     flex: 2;
     padding: 20px;
+    background-color: rgb(243, 242, 242);
+    border-radius: 20px;
+    margin-right: 20px;
 }
 
 #textoImagem article > p {
@@ -93,19 +96,30 @@ main {
 @media (max-width: 768px) {
     
     header {
-        border-radius: 0px;
+        border-radius: 0px 30px 30px 0px;
     }
 
     #textoImagem {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
     #textoImagem article {
         padding: 10px;
+        margin: 15px 0px;
+        border-radius: 0px;
+    }
+
+    #textoImagem article h1 {
+        text-align: justify;
+    }
+
+    #textoImagem section > img {
+        height: 400px;
     }
 
     #frasePersonagem {
         margin: 10px;
+        margin-bottom: 50px;
     }
 }
