@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styleNoticias.css">
+    <link rel="stylesheet" href="../css/stylesChatBot.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../images/gd.png" alt="logo do jogo" id="logoNavbar">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div class="dropdown">
+                <button class="navbarButton">Informações do Jogo</button>
+                <div class="dropdown-content">
+                    <a href="paginaPersonagens.html">Personagens</a>
+                    <a href="paginaMapasPrincipal.html">Mapas</a>
+                    <a href="paginaArsenal.html">Arsenal</a>
+                </div>
+            </div>
+            <a href="#">
+                <button class="navbarButton">Notícias</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton" onclick="abrirSuporte()">Suporte</button>
+            </a>
+            <a href="../index.html">
+                <button class="navbarButton">Home</button>
+            </a>
+            <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
+        </nav>
+    </header>
+    <main>
+        <section id="Banner"> <!-- Seção para o banner do jogo -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/cat.jpg" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/gd.png" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/clash.jpg" class="d-block w-100" alt="..." height="429px">
+                    <div class="carousel-caption d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <button id="jogarBanner">Jogar</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+        <h2>Notícias</h2>
+        <section id="noticia">
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+            <article class="noticiaContainer">
+                <img src="../images/clash.jpg" alt="">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ut qui odio nostrum? Laudantium in natus error ipsa, ducimus optio aperiam! Magnam nostrum dolorem ipsum facilis exercitationem reiciendis laudantium? Eligendi!</p>
+            </article>
+        </section>
+    </main>
+    
+    <!-- Aba de suporte -->
+    <div class="suporte-aba" id="abaSuporte">
+      <div class="suporte-header">
+          <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+      </div>
+      <p>Bem-vindo, no que podemos ajudar?</p>
+      <div id="suporte">
+          <div class="chatbot-preview" onclick="expandirChatBot()">
+            <div class="header-preview">
+                <p>CHAT DE DUVIDAS</p>
+            </div>
+            <div class="footer-preview">
+                <input type="text" placeholder="Pergunte aqui...">
+                <button id="btn-submit-preview">Enviar</button>
+            </div>
+          </div>
+      </div>
+        
+        <!-- Área para o chatbot expandido -->
+        <div id="chatbot-expanded" class="chatbot-expanded">
+          <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
+          <div class="box-questions">
+            <div class="header">
+              <p>CHAT DE DÚVIDAS</p>
+            </div>
+            <p id="status"></p>
+            <div id="history">
+              <!-- Aqui vai o chat gerado conforme as respostas -->
+            </div>
+            <div class="footer">
+              <input type="text" id="message-input" placeholder="Pergunte aqui...">
+              <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+            </div>
+          </div>
+        </div>
+      <div class="botoes-info">
+          <a href="pages/paginaPoliticaDePrivacidade.html">
+              <button>Políticas de Privacidade</button>
+          </a>
+          <a href="pages/paginaTermos.html">
+              <button>Termos e Condições</button>
+          </a>
+      </div>
+  </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/chatBot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

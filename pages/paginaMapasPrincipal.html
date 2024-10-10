@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/stylesChatBot.css">
+    <link rel="stylesheet" href="../css/styleMapas.css">
+    <title>Mapas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../images/gd.png" alt="logo do jogo" id="logoNavbar">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div class="dropdown">
+                <button class="navbarButton">Informações do Jogo</button>
+                <div class="dropdown-content">
+                    <a href="paginaPersonagens.html">Personagens</a>
+                    <a href="#">Mapas</a>
+                    <a href="paginaArsenal.html">Arsenal</a>
+                </div>
+            </div>
+            <a href="paginaNoticias.html">
+                <button class="navbarButton">Notícias</button>
+            </a>
+            <a href="#">
+                <button class="navbarButton" onclick="abrirSuporte()">Suporte</button>
+            </a>
+            <a href="../index.html">
+                <button class="navbarButton">Home</button>
+            </a>
+            <button id="jogar" onclick="location.href='pagina.html'">Jogar Agora</button>
+        </nav>
+    </header>
+    <main>
+        <section class="mapas">
+            <div class="tituloContainer">
+                <h1>Mapas</h1>
+            </div>
+            <article>
+                <div class="nomeDescricao">
+                    <h4 id="nomeMapa">Mapa Principal</h4> <!-- Nome inicial do mapa -->
+                    <p id="descricaoMapa">Descrição do mapa principal.</p> <!-- Descrição inicial do mapa -->
+                </div>
+                <div class="mapaContainer">
+                    <img src="../images/mapa1.jpg" alt="Mapa Principal" id="MapaPrincipalDaPagina">
+                </div>
+                <div class="miniMapas">
+                    <img src="../images/mapa2.jpg" alt="Mini Mapa 1" class="miniMapa" 
+                         data-nome="Mapa Florestal" 
+                         data-descricao="Este é o mapa de uma grande floresta cheia de árvores antigas e densas."
+                         data-imagem="../images/mapa2.jpg">
+                    <img src="../images/mapa3.jpg" alt="Mini Mapa 2" class="miniMapa" 
+                         data-nome="Mapa Urbano" 
+                         data-descricao="Este é o mapa de uma cidade moderna com arranha-céus e ruas movimentadas."
+                         data-imagem="../images/mapa3.jpg">
+                    <img src="../images/mapa4.jpg" alt="Mini Mapa 3" class="miniMapa" 
+                         data-nome="Mapa do Deserto" 
+                         data-descricao="Um mapa que retrata vastas dunas de areia e temperaturas escaldantes."
+                         data-imagem="../images/mapa4.jpg">
+                    <img src="../images/mapa5.jpg" alt="Mini Mapa 4" class="miniMapa" 
+                         data-nome="Mapa Montanhoso" 
+                         data-descricao="Este mapa mostra uma paisagem de montanhas altas e trilhas desafiadoras."
+                         data-imagem="../images/mapa5.jpg">
+                </div>
+            </article>
+        </section>
+                      
+    </main>
+    <footer>
+        <h1 class="tituloParaAbas">Baixe o jogo</h1>
+        <div id="imagensETexto">
+            <div id="redesSociais">
+                <a href="#">
+                    <img src="../images/youtubeLogo.jpg" alt="Youtube">
+                </a>
+                <a href="#">
+                    <img src="../images/instagramLogo.jpg" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="../images/blueskyLogo.png" alt="Bluesky">
+                </a>
+                <a href="https://github.com/Infinity-Forge">
+                    <img src="../images/githubLogo.png" alt="Github">
+                </a>
+            </div>
+            <div id="logos">
+                <img src="../images/empresaLogo.png" alt="logo da empresa">
+                <img src="../images/patrick.jpg" alt="logo do jogo">
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae est totam excepturi cum ut nesciunt exercitationem voluptas asperiores aspernatur atque, possimus officia cupiditate unde impedit corporis aliquam repellendus consequuntur nemo?</p>
+        </div>
+        <div id="politicas">
+            <a href="../pages/paginaPoliticaDePrivacidade.html">
+                <p>Politicas de privacidade</p>
+            </a>
+            <a href="../pages/paginaTermos.html">
+                <p>Termos e Condições</p>
+            </a>
+            <a href="#">
+                <p>Preferencia de Cookies</p>
+            </a>
+        </div>
+        <div id="imagemIdade">
+            <img src="../images/16anosLogo.png" alt="indicação de idade para o jogo">
+        </div>
+    </footer>
+
+    <!-- Aba de suporte -->
+    <div class="suporte-aba" id="abaSuporte">
+        <div class="suporte-header">
+            <button class="fechar-aba" onclick="fecharSuporte()">X</button>
+        </div>
+        <p>Bem-vindo, no que podemos ajudar?</p>
+        <div id="suporte">
+            <div class="chatbot-preview" onclick="expandirChatBot()">
+              <div class="header-preview">
+                  <p>CHAT DE DUVIDAS</p>
+              </div>
+              <div class="footer-preview">
+                  <input type="text" placeholder="Pergunte aqui...">
+                  <button id="btn-submit-preview">Enviar</button>
+              </div>
+            </div>
+        </div>
+          
+          <!-- Área para o chatbot expandido -->
+          <div id="chatbot-expanded" class="chatbot-expanded">
+            <button class="back-button" onclick="recolherChatBot()">&#8592; Voltar</button>
+            <div class="box-questions">
+              <div class="header">
+                <p>CHAT DE DÚVIDAS</p>
+              </div>
+              <p id="status"></p>
+              <div id="history">
+                <!-- Aqui vai o chat gerado conforme as respostas -->
+              </div>
+              <div class="footer">
+                <input type="text" id="message-input" placeholder="Pergunte aqui...">
+                <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        <div class="botoes-info">
+            <a href="../pages/paginaPoliticaDePrivacidade.html">
+                <button>Políticas de Privacidade</button>
+            </a>
+            <a href="../pages/paginaTermos.html">
+                <button>Termos e Condições</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+<script src="../js/mapas.js"></script>
+<script src="../js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="../js/chatBot.js"></script>
+
+</html>
