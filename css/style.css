@@ -289,6 +289,7 @@ h1.tituloParaAbas {
 /* Efeito de hover para expandir a imagem */
 .containerGardiaoCavaleiros:hover {
     transform: scale(1.15);
+    cursor: pointer;
 }
 
 /* Estilo da imagem */
