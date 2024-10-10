@@ -182,9 +182,9 @@ main > h2 {
 
 main section > article.noticiaContainer {
     flex: 1 1 30%;
-    background-color: var(--cinza-dos-gatoides-e-mapas);
+    background-color: var(--cinza);
     max-width: 31%;
-    height: 340px;
+    height: auto;
     margin: 50px 20px 20px 20px;
     padding: 10px;
     border: #5c5c5c 1px solid;
@@ -192,21 +192,23 @@ main section > article.noticiaContainer {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-article.noticiaContainer > img {
-    width: 100%;
-    background-repeat: no-repeat;
-}
-
-article.noticiaContainer > h1 {
-    color: black;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 article.noticiaContainer > p {
     color: black;
     line-height: 1.2em;
+    overflow: visible;
+    white-space: normal;
+    max-height: none;
+}
+
+article.noticiaContainer > img {
+    width: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+article.noticiaContainer > img {
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 /* sobre a aba do suporte e a expansão do chatbot */
