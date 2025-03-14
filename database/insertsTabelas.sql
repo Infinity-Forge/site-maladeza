@@ -1,36 +1,21 @@
 -- Inserts para a tabela USUARIOS
 INSERT INTO USUARIOS (usu_nome, usu_email, usu_senha, usu_data_cadastro, usu_tipo) VALUES
+-- Administradores
 ('Carlos Silva', 'carlos.silva@email.com', 'senha123', NOW(), 'Administrador'),
-('Ana Oliveira', 'ana.oliveira@email.com', 'senha456', NOW(), 'Usuário Comum'),
-('João Souza', 'joao.souza@email.com', 'senha789', NOW(), 'Moderador'),
-('Mariana Costa', 'mariana.costa@email.com', 'senha321', NOW(), 'Usuário Comum'),
 ('Ricardo Mendes', 'ricardo.mendes@email.com', 'senha654', NOW(), 'Administrador'),
-('Beatriz Lima', 'beatriz.lima@email.com', 'senha987', NOW(), 'Usuário Comum'),
-('Fernanda Rocha', 'fernanda.rocha@email.com', 'senha000', NOW(), 'Usuário Comum'),
-('Eduardo Alves', 'eduardo.alves@email.com', 'senha111', NOW(), 'Moderador'),
-('Patrícia Nunes', 'patricia.nunes@email.com', 'senha222', NOW(), 'Usuário Comum'),
 ('Gustavo Ferreira', 'gustavo.ferreira@email.com', 'senha333', NOW(), 'Administrador'),
-('Luana Martins', 'luana.martins@email.com', 'senha444', NOW(), 'Usuário Comum'),
-('Thiago Ribeiro', 'thiago.ribeiro@email.com', 'senha555', NOW(), 'Moderador'),
-('Natália Duarte', 'natalia.duarte@email.com', 'senha666', NOW(), 'Usuário Comum'),
 ('Bruno Cardoso', 'bruno.cardoso@email.com', 'senha777', NOW(), 'Administrador'),
-('Camila Torres', 'camila.torres@email.com', 'senha888', NOW(), 'Usuário Comum'),
-('Vinícius Barbosa', 'vinicius.barbosa@email.com', 'senha999', NOW(), 'Usuário Comum'),
-('Juliana Mendes', 'juliana.mendes@email.com', 'senha101', NOW(), 'Moderador'),
 ('Rafael Almeida', 'rafael.almeida@email.com', 'senha202', NOW(), 'Administrador'),
-('Larissa Gonçalves', 'larissa.goncalves@email.com', 'senha303', NOW(), 'Usuário Comum'),
-('Felipe Teixeira', 'felipe.teixeira@email.com', 'senha404', NOW(), 'Usuário Comum'),
-('Tatiane Freitas', 'tatiane.freitas@email.com', 'senha505', NOW(), 'Usuário Comum'),
-('Leonardo Campos', 'leonardo.campos@email.com', 'senha606', NOW(), 'Moderador'),
-('Carolina Antunes', 'carolina.antunes@email.com', 'senha707', NOW(), 'Usuário Comum'),
 ('Henrique Vasconcelos', 'henrique.vasconcelos@email.com', 'senha808', NOW(), 'Administrador'),
-('Sabrina Farias', 'sabrina.farias@email.com', 'senha909', NOW(), 'Usuário Comum'),
-('Rodrigo Nascimento', 'rodrigo.nascimento@email.com', 'senha010', NOW(), 'Moderador'),
-('Jessica Moreira', 'jessica.moreira@email.com', 'senha020', NOW(), 'Usuário Comum'),
 ('André Maciel', 'andre.maciel@email.com', 'senha030', NOW(), 'Administrador'),
-('Bruna Silveira', 'bruna.silveira@email.com', 'senha040', NOW(), 'Usuário Comum'),
-('Márcio Correia', 'marcio.correia@email.com', 'senha050', NOW(), 'Usuário Comum');
 
+-- Moderadores
+('João Souza', 'joao.souza@email.com', 'senha789', NOW(), 'Moderador'),
+('Eduardo Alves', 'eduardo.alves@email.com', 'senha111', NOW(), 'Moderador'),
+('Thiago Ribeiro', 'thiago.ribeiro@email.com', 'senha555', NOW(), 'Moderador'),
+('Juliana Mendes', 'juliana.mendes@email.com', 'senha101', NOW(), 'Moderador'),
+('Leonardo Campos', 'leonardo.campos@email.com', 'senha606', NOW(), 'Moderador'),
+('Rodrigo Nascimento', 'rodrigo.nascimento@email.com', 'senha010', NOW(), 'Moderador');
 
 -- Inserts para a tabela FAQ
 INSERT INTO FAQ (usu_id, faq_pergunta, faq_resposta) VALUES
@@ -46,14 +31,7 @@ INSERT INTO FAQ (usu_id, faq_pergunta, faq_resposta) VALUES
 (10, 'O que fazer se eu encontrar um bug no jogo?', 'Você pode relatar bugs pelo e-mail oficial da equipe de desenvolvimento.'),
 (11, 'Como posso entrar em contato com o suporte técnico?', 'Você pode entrar em contato pelo nosso e-mail de suporte ou pelo chat disponível no site.'),
 (12, 'Posso transferir minha conta para outra plataforma?', 'Não, por enquanto não temos suporte para outras plataformas.'),
-(13, 'O jogo tem microtransações?', 'Não, tudo no jogo é gratuito e depende do jogador para conseguir.'),
-(14, 'Como funciona o sistema de clãs?', 'Não, o jogo não possui sistema de clãs pois jogamos apenas com 5 personagens.'),
-(15, 'Há eventos sazonais no jogo?', 'Não, por enquanto não temos esse tipo de eventos no jogo.'),
-(16, 'O jogo precisa de internet para funcionar?', 'Não, o jogo é totalmente offline.'),
-(17, 'O jogo está disponível para celular?', 'Não, apenas para computadores, mas pretendemos ampliar as plataformas disponíveis.'),
-(18, 'Os desenvolvedores aceitam sugestões de melhorias?', 'Sim, sempre estamos abertos a sugestões! Você pode enviá-las pelo nosso email de suporte.'),
-(19, 'Como faço para desbloquear personagens especiais?', 'Para desbloquear outros personagens você deve avançar na história do jogo, onde você vai jogar com vários personagens diferentes no decorrer dela.'),
-(20, 'Haverá atualizações futuras para o jogo?', 'Sim, nossa equipe está constantemente trabalhando em melhorias e novos conteúdos para o jogo.');
+(13, 'O jogo tem microtransações?', 'Não, tudo no jogo é gratuito e depende do jogador para conseguir.');
 
 
 -- Inserts para a tabela NOTICIAS
@@ -164,11 +142,4 @@ INSERT INTO SUPORTE (usu_id, asst_id, sup_mensagem, sup_status, sup_email, sup_n
 (10, 10, 'A história do jogo é incrível! Parabéns à equipe de desenvolvimento.', 'Fechado', 'jogador10@example.com', 'Mariana Santos'),
 (11, 11, 'Os controles do jogo estão muito sensíveis. Há como ajustar a sensibilidade?', 'Aberto', 'jogador11@example.com', 'Gustavo Oliveira'),
 (12, 12, 'Como desbloqueio a arma especial que vi em um vídeo?', 'Em andamento', 'jogador12@example.com', 'Camila Rocha'),
-(13, 13, 'O jogo é incrível! Vocês planejam lançar uma sequência?', 'Fechado', 'jogador13@example.com', 'Bruno Costa'),
-(14, 14, 'Quando será lançada a próxima atualização do jogo?', 'Aberto', 'jogador14@example.com', 'Isabela Lima'),
-(15, 15, 'O jogo está travando muito durante as cutscenes. Como posso resolver?', 'Em andamento', 'jogador15@example.com', 'Thiago Almeida'),
-(16, 16, 'O jogo roda em sistemas Linux?', 'Aberto', 'jogador16@example.com', 'Patrícia Souza'),
-(17, 17, 'Sugiro adicionar um modo de dificuldade mais desafiador.', 'Fechado', 'jogador17@example.com', 'Ricardo Mendes'),
-(18, 18, 'O áudio do jogo desaparece após alguns minutos de jogo.', 'Aberto', 'jogador18@example.com', 'Juliana Oliveira'),
-(19, 19, 'Existem finais alternativos no jogo? Se sim, como posso alcançá-los?', 'Em andamento', 'jogador19@example.com', 'Felipe Rocha'),
-(20, 20, 'Tenho uma dúvida que não se encaixa em nenhuma das categorias listadas.', 'Fechado', 'jogador20@example.com', 'Vanessa Costa');
+(13, 13, 'O jogo é incrível! Vocês planejam lançar uma sequência?', 'Fechado', 'jogador13@example.com', 'Bruno Costa');
