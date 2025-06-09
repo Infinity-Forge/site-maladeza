@@ -103,11 +103,16 @@ form {
     height: auto;
   }
 
-  .left-panel,
+  .left-panel {
+    width: 100%;
+    height: 20vh;
+  }
+
   .right-panel {
     width: 100%;
     height: 50vh;
   }
+
 
   .right-panel {
     height: auto;
